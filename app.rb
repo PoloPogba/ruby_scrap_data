@@ -6,20 +6,18 @@ require 'open-uri'
 require 'csv'
 require 'pp'
 
-class Start
+class Index
     puts "Choisis le truc que tu veux faire!  Pour voir JSON, tappes JSON! Pour le Google Sheet, tappes GOOGLE! Pour le fichier CSV, tappes CSV!"
     print ">"
     choix = gets.chomp
     if choix =="JSON"
-    Townhall.save_as_JSON
-    puts "woohoo! le fichier vient d'être créé!"
+    puts "woohoo! le fichier peut être créé avec Townhall.save_as_JSON!"
     elsif choix =="GOOGLE"
-    Townhall.save_as_spreadsheet
-    puts "woohoo! le fichier vient d'être créé! tu peux le trouver dans https://docs.google.com/spreadsheets/d/1dShvJQ8MyP8ZkrNgno0Aj_qurjmhKd5450rsdwxTSNI/edit#gid=0"
+    puts "woohoo! le fichier peut être créé avec Townhall.save_as_spreadsheet! tu peux le trouver dans https://docs.google.com/spreadsheets/d/1dShvJQ8MyP8ZkrNgno0Aj_qurjmhKd5450rsdwxTSNI/edit#gid=0"
     elsif choix =="CSV"
-    Townhall.save_as_csv
-    puts "woohoo! le fichier vient d'être créé!"
+    
+    puts "woohoo! le fichier peut être créé avec Townhall.save_as_csv!"
     end
 end
 
-Start
+Index
